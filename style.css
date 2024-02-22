@@ -1,0 +1,10 @@
+body {
+    background-color: antiquewhite;
+    display: flex;
+}
+
+h1 {
+    color: rgb(128, 178, 194);
+    background-color: whitesmoke;
+    padding: 10px;
+}
