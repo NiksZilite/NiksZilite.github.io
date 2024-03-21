@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Main Elements */
+
+a {
+    font-size: 3rem;
+    color: darkgray;
+    text-decoration: none;
+}
+
+/* Body */
+
+.banner {
+    position: absolute;
+    width: 20rem;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    background-color: salmon;
+    background-image: url(Images/Texture.png);
+    background-repeat: repeat;
+    background-size: 55%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+    .gallery_container {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: fit-content;
+        align-items: center;
+        flex: 50%;
+    }
+
+        .gal_button {
+            font-size: 5rem;
+        }
+
+        .gal_box {
+            display: flex;
+            flex-direction: row;
+        }
+
+            .gal_side {
+                height: 250px;
+            }
+
+            .gal_links {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+        .gal_underline {
+            width: 250px;
+        }
+
+    .img_container {
+        flex: 50%;
+        display: flex;
+        justify-content: right;
+        height: 80vh;
+    }
+
+    img {
+        height: 100%;
+    }

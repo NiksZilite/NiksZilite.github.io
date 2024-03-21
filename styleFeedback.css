@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+}
+
+/* Main Elements */
+
+a {
+    font-size: 3rem;
+    color: darkgray;
+    text-decoration: none;
+}
+
+/* Body */
+
+.banner {
+    position: absolute;
+    width: 21rem;
+    height: 100%;
+    top: 0;
+    background-color: salmon;
+    background-image: url(Images/Texture.png);
+    background-repeat: repeat;
+    background-size: 55%;
+    z-index: -1;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+    .gallery_container {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        align-items: center;
+        justify-content: center;
+        flex: 50%;
+        padding: 5rem 2rem 5rem 0;
+        gap: 1.5rem;
+    }
+
+        .gal_button {
+            font-size: 5rem;
+        }
+
+        .gal_box {
+            display: flex;
+            flex-direction: row;
+        }
+
+            .gal_side {
+                height: 250px;
+            }
+
+            .gal_links {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+            }
+
+        .gal_underline {
+            width: 250px;
+        }
+
+    .feedback_container {
+        border: solid 2px black;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+        .--Name {
+            font-size: 2rem;
+        }
+
+        .--Abaut {
+            font-size: 1.5rem;
+        }
+
+        .--Text {
+
+        }
+
+        .--Date {
+            display: flex;
+            justify-content: right;
+            color: rgb(58, 58, 58);
+        }
+
+    .img_container {
+        flex: 50%;
+        display: flex;
+        justify-content: left;
+        height: 80vh;
+    }
+
+    .clock {
+        position: fixed;
+        padding-top: 3rem;
+        top: 0;
+        height: 85%;
+    }
