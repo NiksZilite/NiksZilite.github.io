@@ -1,28 +1,46 @@
-const GIF1_link = document.getElementById('GIF1');
-const GIF2_link = document.getElementById('GIF2');
-const GIF3_link = document.getElementById('GIF3');
-const GIF4_link = document.getElementById('GIF4');
-const GIF5_link = document.getElementById('GIF5');
+const GIF1_link = document.getElementById('GIF1_img');
+const GIF2_link = document.getElementById('GIF2_img');
+const GIF3_link = document.getElementById('GIF3_img');
+const GIF4_link = document.getElementById('GIF4_img');
+const GIF5_link = document.getElementById('GIF5_img');
 
-// const filter = document.getElementById('filter');
+const GIF1_GIF = document.getElementById('GIF1_gif');
+const GIF2_GIF = document.getElementById('GIF2_gif');
+const GIF3_GIF = document.getElementById('GIF3_gif');
+const GIF4_GIF = document.getElementById('GIF4_gif');
+const GIF5_GIF = document.getElementById('GIF5_gif');
 
-GIF1_link.addEventListener('click', function() {
-    GIF1_link.classList.toggle('active');
-    // filter.classList.toggle('blur');
-});
+function Open_Gif_1() {
+    GIF1_GIF.classList.toggle('active');
+}
 
-GIF2_link.addEventListener('click', function() {
-    GIF2_link.classList.toggle('active');
-});
+GIF1_link.addEventListener('click', Open_Gif_1);
+GIF1_GIF.addEventListener('click', Open_Gif_1);
 
-GIF3_link.addEventListener('click', function() {
-    GIF3_link.classList.toggle('active');
-});
+function Open_Gif_2() {
+    GIF2_GIF.classList.toggle('active');
+}
 
-GIF4_link.addEventListener('click', function() {
-    GIF4_link.classList.toggle('active');
-});
+GIF2_link.addEventListener('click', Open_Gif_2);
+GIF2_GIF.addEventListener('click', Open_Gif_2);
 
-GIF5_link.addEventListener('click', function() {
-    GIF5_link.classList.toggle('active');
-});
+function Open_Gif_3() {
+    GIF3_GIF.classList.toggle('active');
+}
+
+GIF3_link.addEventListener('click', Open_Gif_3);
+GIF3_GIF.addEventListener('click', Open_Gif_3);
+
+function Open_Gif_4() {
+    GIF4_GIF.classList.toggle('active');
+}
+
+GIF4_link.addEventListener('click', Open_Gif_4);
+GIF4_GIF.addEventListener('click', Open_Gif_4);
+
+function Open_Gif_5() {
+    GIF5_GIF.classList.toggle('active');
+}
+
+GIF5_link.addEventListener('click', Open_Gif_5);
+GIF5_GIF.addEventListener('click', Open_Gif_5);
