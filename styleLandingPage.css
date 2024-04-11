@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    color: white;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.gallery_container  {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    background-image: url(./Images/shimer.png);
+    background-size: contain;
+    padding: 1.5rem;
+    /* background-repeat: no-repeat; */
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+.homework_container  {
+    position: absolute;
+    top: 280px;
+    left: 730px;
+    background-image: url(./Images/shimer.png);
+    background-size: contain;
+    padding: 1.5rem;
+    /* background-repeat: no-repeat; */
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+}
+
+    #shimer1.hide {
+        background-image: none;
+    }
+    
+    #shimer2.hide {
+        background-image: none;
+    }
+
+.link_button {
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
+    display: inline-block;
+    color: darkcyan;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+    #gal_links.hide {
+        display: none;
+    }
+
+    #home_links.hide {
+        display: none;
+    }
+
+.gallery_container:hover :nth-child(1){
+    opacity: 100;
+}
+
+.homework_container:hover :nth-child(1){
+    opacity: 100;
+}
+
+#link_container1, #link_container2 {
+    opacity: 0;
+    display: none;
+    width: max-content;
+    transition: opacity 1s ease-out;
+}
+
+#link_container1 > * , #link_container2 > * {
+    transition: all 1.5s ease-in;
+}
+
+#link_container1.active {
+    opacity: 100;
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 0px;
+    left: 50px;
+}
+
+#link_container2.active {
+    opacity: 100;
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    justify-content: space-between;
+
+    position: absolute;
+    top: -200px;
+    left: -500px;
+}
+
+    .link_box {
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+        padding-top: 3.5rem;
+    }
+
+
+#backgroundImage {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./Images/cut\ the\ ego\ new.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 1.5s ease-out;
+}
+
+#backgroundImage.gallery {
+    transform: scale(250%) translateX(600px) translateY(170px);
+}
+
+#backgroundImage.homework {
+    transform: scale(300%) translateX(-100px) translateY(50px);
+}
+
+/* Nav BARRRRR */
+
+#nav_bar {
+    position: fixed;
+    /* width: calc(100vw/2.5); */
+    width: 100vw;
+    height: 60px;
+    bottom: 0;
+    display: none;
+    background-color: aquamarine;
+}
+
+#nav_bar.show {
+    display: flex;
+    justify-content: center;
+}
+
+#nav_bar > div{
+    height: 100%;
+    background-size: contain;
+}
+
+.nav_links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 60vw;
+}
+
+.nav_links * {
+    color: black;
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    0% { transform: translate(0, 0px); }
+    50% { transform: translate(0, 15px); }
+    100% { transform: translate(0, -0px); }
+}

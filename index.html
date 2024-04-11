@@ -3,66 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styleLanding.css" />
-    <title>Landing Page</title>
+    <link rel="stylesheet" type="text/css" href="styleLandingPage.css" />
+    <title>LandingPage</title>
 </head>
 <body>
     
-    <div class="design_top"></div>
+    <div  id="backgroundImage">
 
-    <div class="design_bottom">
-        <div class="design_body"></div>
-        <div class="design_clock"></div>
     </div>
 
-    <div class="bannerText"> <h1> KILL THE EGO </h1> </div>
-    <div class="banner"></div>
+    <div class="gallery_container" id="shimer1">
 
-    <div class="nav">
+        <a class="link_button" id="gal_links"> Gallery </a>
 
-        <div class="left_side">
+        <div id="link_container1">
 
-            <div class="gallery_container">
-
-                <a class="gal_button" href="./gallery.html"> Gallery </a>
-                <img class="gal_underline" src="./gal_underline.svg">
+            <div class="link_header"> Gallery </div>
+    
+            <div class="link_box">
+                    <a href="./graficGallery.html"> Graphic Art </a>
+                    <a href="./photoGallery.html"> Photos </a>
             </div>
-
-            <div class="gallery_container">
-
-                <a class="gal_button" href="./homework.html"> Homework </a>
-                <img class="gal_underline" src="./gal_underline.svg">
-            </div>
-
-            <!-- <div class="homework_container">
-            </div> -->
         </div>
 
-        <div class="right_side">
-
-            <div class="gallery_container">
-
-                <a class="gal_button" href="./feedback.html"> Feedback </a>
-                <img class="gal_underline" src="./gal_underline.svg">
-            </div>
-
-            <div class="gallery_container">
-
-                <a class="gal_button" href="./contacts.html"> Contacts </a>
-                <img class="gal_underline" src="./gal_underline.svg">
-            </div>
-
-            <!-- <div class="feedback_container">
-
-            </div>
-
-            <div class="contacts_container">
-
-            </div> -->
-        </div>
     </div>
 
-    <div class="comment_button"></div>
+    <div class="homework_container" id="shimer2">
+
+        <a class="link_button" id="home_links"> Homework </a>
+
+        <div id="link_container2">
+
+            <div class="link_header"> Homework </div>
+    
+            <div class="link_box">
+                <a href="./gifsGallery.html"> GIFs </a>
+                <a href="https://nikszilite.github.io/artist/" target="_blank"> Artist Page </a>
+                <a href="./lecture-5/index.html"> Lectur-5 </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="contacts_container">
+
+        <span class="shimer" id="cont_links"></span>
+        <a class="link_button" href="#cont_links"> Contacts </a>
+
+    </div>
+
+    <div class="feedback_container">
+
+        <span class="shimer" id="feed_links"></span>
+        <a class="link_button" href="#feed_links"> Feedback </a>
+
+    </div>
+    
+
+    <nav id="nav_bar">
+
+    <div class="nav_links">
+        <div id="MainPageButton"> Landing Page </div>
+        <div id="GalleryButton"> Gallery </div>
+        <div id="HomeworkButton"> Homework </div>
+        <div id="MainPageButton"> Contacts </div>
+        <div id="MainPageButton"> Feedback </div>
+    </div>
+
+    </nav>
+
+    <script src="./landingPage.js"></script>
 
 </body>
 </html>

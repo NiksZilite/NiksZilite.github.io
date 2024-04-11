@@ -19,6 +19,11 @@ p {
     margin: 1rem;
 }
 
+p {
+    padding: 0;
+    margin: 1rem;
+}
+
 .container {
     display: flex;
     flex-direction: column;
@@ -74,7 +79,6 @@ p {
     transition: color 0.4s ease-out;
 
 }
-
 .box > :nth-child(1) {
     flex: 90%;
 }
@@ -96,10 +100,6 @@ p {
 #GIF1_img {
     background-image: url(Images/Niks_Zilite_Augs_JPEG.jpeg);
 }
-
-    #GIF1_gif {
-        display: none;
-    }
 
     #GIF1_gif.active {
         display: inline-block;
