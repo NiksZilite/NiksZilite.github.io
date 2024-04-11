@@ -23,6 +23,8 @@ function setup() {
 
 function draw() {
 
+  text(points ,width / 2 ,height - 40)
+
   let circleX = xValue;
   let circleY = yValue;
 
@@ -37,7 +39,6 @@ function draw() {
 
   if (hasUserClicked == false) {
     text('Click and find were the sound is coming form.', width / 2, height / 2)
-    text(points ,width / 2 ,height - 40)
     textSize(48);
     textAlign('center');
   } else {
