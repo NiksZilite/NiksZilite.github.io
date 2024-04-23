@@ -6,15 +6,18 @@
     <link rel="stylesheet" type="text/css" href="styleLandingPage.css" />
     <title>LandingPage</title>
 </head>
-<body>
-    
-    <div  id="backgroundImage">
+<body id="overflow">
 
+    <div id="backgroundStars">
     </div>
 
-    <div class="gallery_container" id="shimer1">
+    <div  id="backgroundImage">
+    </div>
+
+    <div class="gallery_container">
 
         <a class="link_button" id="gal_links"> Gallery </a>
+        <div id="shimer1"></div>
 
         <div id="link_container1">
 
@@ -23,30 +26,30 @@
             <div class="link_box">
                     <a href="./graficGallery.html"> Graphic Art </a>
                     <a href="./photoGallery.html"> Photos </a>
+                    <a href="./lecture-5/index.html"> Lectur-5 </a>
+                    <a href="./soundscape/index.html"> Soundscape </a>
+                    <a href="./tv/index.html"> TV Video </a>
             </div>
         </div>
-
     </div>
 
-    <div class="homework_container" id="shimer2">
+    <div class="homework_container">
 
         <a class="link_button" id="home_links"> Homework </a>
+        <div id="shimer2"></div>
 
         <div id="link_container2">
 
             <div class="link_header"> Homework </div>
     
             <div class="link_box">
-                <a href="./gifsGallery.html"> GIFs </a>
+                <a id="gifs_links"> GIFs </a>
                 <a href="https://nikszilite.github.io/artist/" target="_blank"> Artist Page </a>
-                <a href="./lecture-5/index.html"> Lectur-5 </a>
-                <a href="./soundscape/index.html"> Soundscape </a>
-                <a href="./tv/index.html"> TV Video </a>
             </div>
         </div>
-
     </div>
 
+<!-- 
     <div class="contacts_container">
 
         <span class="shimer" id="cont_links"></span>
@@ -59,22 +62,47 @@
         <span class="shimer" id="feed_links"></span>
         <a class="link_button" href="#feed_links"> Feedback </a>
 
-    </div>
+    </div> -->
     
 
     <nav id="nav_bar">
-
-    <div class="nav_links">
-        <div id="MainPageButton"> Landing Page </div>
-        <div id="GalleryButton"> Gallery </div>
-        <div id="HomeworkButton"> Homework </div>
-        <div id="MainPageButton"> Contacts </div>
-        <div id="MainPageButton"> Feedback </div>
-    </div>
-
+        <div class="nav_links">
+            <div id="MainPageButton"> Landing Page </div>
+            <div id="GalleryButton"> Gallery </div>
+            <div id="HomeworkButton"> Homework </div>
+            <div id="MainPageButton"> Contacts </div>
+            <div id="MainPageButton"> Feedback </div>
+        </div>
     </nav>
 
+    
+    <div id="gifs_box_container">
+
+        <div class="gifs_box_1">
+
+            <div class="box" id="GIF1_img"> <p> Frame Animation</p> <p> Click to view </p> </div>
+            <div id="GIF1_gif">  </div>
+
+            <div class="box" id="GIF2_img"> <p> Frame Animation</p> <p> Click to view </p> </div>
+            <div id="GIF2_gif">  </div>
+
+            <div class="box box_long" id="GIF5_img"> <p> Pixel Art</p> <p> Click to view </p> </div>
+            <div id="GIF5_gif">  </div>
+        </div>
+
+        <div class="gifs_box_2">
+
+            <div class="box box_long" id="GIF4_img"> <p> Masking Effect</p> <p> Click to view </p> </div>
+            <div id="GIF4_gif">  </div>
+
+            <div class="box" id="GIF3_img"> <p> Rotoscoping </p> <p> Click to view </p> </div>
+            <div id="GIF3_gif">  </div>
+        </div>
+
+    </div>
+
     <script src="./landingPage.js"></script>
+    <script src="./display.js"></script>
 
 </body>
 </html>

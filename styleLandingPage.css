@@ -3,52 +3,145 @@
     color: white;
 }
 
+a {
+    cursor: pointer;
+}
+
 body {
     margin: 0;
     background-color: black;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
+}
+
+body.show {
+    overflow: visible;
+}
+
+/* #overflow {
+
+}
+
+#overflow.show {
+
+} */
+
+#backgroundStars {
+    height: 200%;
+    width: 200%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./Images/stars.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 1.5s ease-out;
+    display: inline;
+
+    animation-name: floating;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#backgroundStars.hide {
+    display: none;
+}
+
+    #backgroundStars.zoomedIn {
+        animation-duration: 9s;
+    }
+
+#backgroundImage {
+    height: 150%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(./Images/cut\ the\ ego\ new.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: transform 1.5s ease-out;
+    display: inline;
+}
+
+#backgroundImage.gallery {
+    transform: scale(250%) translateX(600px) translateY(170px);
+}
+
+#backgroundImage.homework {
+    transform: scale(300%) translateX(-100px) translateY(50px);
+}
+
+#backgroundImage.hide {
+    display: none;
 }
 
 .gallery_container  {
     position: absolute;
     top: 150px;
     left: 150px;
-    background-image: url(./Images/shimer.png);
-    background-size: contain;
     padding: 1.5rem;
     /* background-repeat: no-repeat; */
     opacity: 100;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
 }
 
 .homework_container  {
     position: absolute;
     top: 280px;
     left: 730px;
-    background-image: url(./Images/shimer.png);
-    background-size: contain;
     padding: 1.5rem;
     /* background-repeat: no-repeat; */
     opacity: 100;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 70px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
 }
 
+#shimer2, #shimer1 {
+    position: absolute;
+    background-image: url(./Images/shimer.png);
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+}
+
+    #shimer1 {
+       animation-name: spinAndShineV1;
+       animation-duration: 45s;
+       animation-iteration-count: infinite;
+       transition: transform 0.5s ease-in;
+       transform: scale(0%);
+   }
+
+   #shimer2 {
+      animation-name: spinAndShineV2;
+      animation-duration: 35s;
+      animation-iteration-count: infinite;
+      transition: transform 0.5s ease-in;
+      transform: scale(0%);
+    }
+
     #shimer1.hide {
-        background-image: none;
+        animation-name: hide;
+        animation-duration: 0.7s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
     }
     
     #shimer2.hide {
-        background-image: none;
+        animation-name: hide;
+        animation-duration: 0.7s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
     }
 
 .link_button {
@@ -59,7 +152,6 @@ body {
     font-size: 3.5rem;
     font-weight: bold;
     text-decoration: none;
-    display: inline-block;
 }
 
     #gal_links.hide {
@@ -72,10 +164,12 @@ body {
 
 .gallery_container:hover :nth-child(1){
     opacity: 100;
+    z-index: 2;
 }
 
 .homework_container:hover :nth-child(1){
     opacity: 100;
+    z-index: 2;
 }
 
 #link_container1, #link_container2 {
@@ -97,7 +191,7 @@ body {
     justify-content: space-between;
 
     position: absolute;
-    top: 0px;
+    top: -100px;
     left: 50px;
 }
 
@@ -116,41 +210,24 @@ body {
     .link_box {
         display: flex;
         gap: 1.5rem;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         padding-top: 3.5rem;
+        flex-shrink: 1 1 50%;
+        width: 700px;
     }
-
-
-#backgroundImage {
-    height: 100vh;
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url(./Images/cut\ the\ ego\ new.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: transform 1.5s ease-out;
-}
-
-#backgroundImage.gallery {
-    transform: scale(250%) translateX(600px) translateY(170px);
-}
-
-#backgroundImage.homework {
-    transform: scale(300%) translateX(-100px) translateY(50px);
-}
 
 /* Nav BARRRRR */
 
 #nav_bar {
     position: fixed;
     /* width: calc(100vw/2.5); */
-    width: 100vw;
+    width: 100%;
     height: 60px;
     bottom: 0;
     display: none;
-    background-color: aquamarine;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(255,255,255,0) 100%);
 }
 
 #nav_bar.show {
@@ -171,18 +248,234 @@ body {
 }
 
 .nav_links * {
-    color: black;
+    color: white;
+    cursor: pointer;
 }
 
-.floating {
-    animation-name: floating;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+/*
+        Gallery css
+*/
+
+#gifs_links {
+    cursor: pointer;
 }
+
+#gifs_box_container {
+    display: none;
+}
+
+#gifs_box_container.open {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-basis: 48%;
+    padding: 3rem 0 6rem 0;
+    background-color: lightblue;
+}
+
+#gifs_box_container > * {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+    height: min-content;
+    max-width: 35rem;
+    flex-wrap: wrap;
+    flex-basis: 48%;
+}
+
+.box {
+    width: 17rem;
+    height: 17rem;
+    position: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    transition: color 0.4s ease-out;
+    background-color: rgb(184, 184, 184);
+}
+
+.box_long {
+    width: 35rem;
+}
+
+.box > :nth-child(1) {
+    flex: 90%;
+    display: none;
+}
+.box > :nth-child(2) {
+    flex: 10%;
+    display: none; 
+}
+
+.box > * {
+
+}
+
+.box:hover > * {
+    text-shadow: 10px 10px 20px rgb(0, 0, 0),
+    -10px 10px 20px rgb(0, 0, 0),
+    -10px -10px 20px rgb(0, 0, 0),
+    10px -10px 20px rgb(0, 0, 0);
+    color: rgb(235, 234, 222);
+    transition: color 1s ease-in;
+    transition: text-shadow 1s ease-in;
+}
+
+#GIF1_img {
+    background-image: url(Images/Niks_Zilite_Augs_JPEG.jpeg);
+}
+
+    #GIF1_gif.active {
+        display: inline-block;
+        position: fixed;
+        width: 100dvw;
+        height: 100dvh;
+        background-repeat: no-repeat;
+        background-color: var(--DarkBlue);
+        background-image: url(GIFs/Niks_Zilite_Augs.gif);
+        top: 0;
+        left: 0;
+
+        background-position-y: 50%;
+        background-position-x: 50%;
+        background-size: 90vh;
+    }
+
+    #GIF2_img {
+        background-image: url(Images/Niks_Zilite_VideoGIF_JPEG.jpeg);
+    }
+    
+        #GIF2_gif {
+            display: none;
+        }
+    
+        #GIF2_gif.active {
+            display: inline-block;
+            position: fixed;
+            width: 100dvw;
+            height: 100dvh;
+            background-repeat: no-repeat;
+            background-color: var(--DarkBlue);
+            background-image: url(GIFs/Niks_Zilite_VideoGIF.gif);
+            top: 0;
+            left: 0;
+
+            background-position-y: 50%;
+            background-position-x: 50%;
+            background-size: 90vh;
+        }
+
+        #GIF3_img {
+            background-image: url(Images/NiksZilite_Roto_JPEG.jpeg);
+        }
+        
+            #GIF3_gif {
+                display: none;
+            }
+        
+            #GIF3_gif.active {
+                display: inline-block;
+                position: fixed;
+                width: 100dvw;
+                height: 100dvh;
+                background-repeat: no-repeat;
+                background-color: var(--DarkBlue);
+                background-image: url(GIFs/NiksZilite_Roto.gif);
+                top: 0;
+                left: 0;
+
+                background-position-y: 50%;
+                background-position-x: 50%;
+                background-size: 90vh;
+            }
+
+        #GIF4_img {
+            background-image: url(Images/Niks_Zilite_Masking_JPEG.jpeg);
+            background-size: cover;
+        }
+        
+            #GIF4_gif {
+                display: none;
+            }
+        
+            #GIF4_gif.active {
+                display: inline-block;
+                position: fixed;
+                width: 100dvw;
+                height: 100dvh;
+
+                background-repeat: no-repeat;
+                background-color: var(--DarkBlue);
+                background-image: url(GIFs/Niks_Zilite_Masking.gif);
+                top: 0;
+                left: 0;
+
+                background-position-y: 50%;
+                background-position-x: 50%;
+                background-size: 80vw;
+            }
+
+        #GIF5_img {
+            background-image: url(Images/Animation\ 6FPS_JPEG.jpeg);
+            background-size: cover;
+        }
+        
+            #GIF5_gif {
+                display: none;
+            }
+        
+            #GIF5_gif.active {
+                display: inline-block;
+                position: fixed;
+                width: 100dvw;
+                height: 100dvh;
+                background-repeat: no-repeat;
+                background-color: var(--DarkBlue);
+                background-image: url(GIFs/Animation\ 6FPS.gif);
+                top: 0;
+                left: 0;
+
+                background-position-y: 50%;
+                background-position-x: 50%;
+                background-size: 90vw;
+            }
+
+/* Animations */
 
 @keyframes floating {
-    0% { transform: translate(0, 0px); }
-    50% { transform: translate(0, 15px); }
-    100% { transform: translate(0, -0px); }
+    0% { transform: translate(0px, 0px); }
+    25% { transform: translate(-30px, 50px); }
+    50% { transform: translate(0px, 100px); }
+    75% { transform: translate(30px, -50px);}
+    100% { transform: translate(-0px, -0px); }
+}
+
+@keyframes spinAndShineV1 {
+    0% { transform: rotate(0deg) scale(0%); }    
+    1% { transform: rotate(0deg) scale(100%); }
+    50% { transform: rotate(180deg) scale(170%); } 
+    100% { transform: rotate(360deg) scale(100%); }
+}
+
+@keyframes spinAndShineV2 {
+    0% { transform: rotate(0deg) scale(0%); }    
+    1% { transform: rotate(45deg) scale(170%); }
+    50% { transform: rotate(180deg) scale(100%); } 
+    100% { transform: rotate(405deg) scale(170%); }
+}
+
+@keyframes hide {
+    0% { transform: rotate(0deg) scale(0); }
+    1% { transform: rotate(0deg) scale(100%); } 
+    100% { transform: rotate(360deg) scale(0%); }
 }
