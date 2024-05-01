@@ -50,7 +50,7 @@ body.show {
 }
 
     #backgroundStars.zoomedIn {
-        animation-duration: 9s;
+        animation-duration: 2s;
     }
 
 #backgroundImage {
@@ -66,6 +66,10 @@ body.show {
     display: inline;
 }
 
+#backgroundImage.main {
+    transform: scale(100%) translateX(0px) translateY(0px);
+}
+
 #backgroundImage.gallery {
     transform: scale(250%) translateX(600px) translateY(170px);
 }
@@ -74,7 +78,15 @@ body.show {
     transform: scale(300%) translateX(-100px) translateY(50px);
 }
 
-#backgroundImage.hide {
+#backgroundImage.feedback {
+    transform: scale(250%) translateX(-800px) translateY(170px);
+}
+
+#backgroundImage.socials {
+    transform: scale(300%) translateX(-200px) translateY(200px);
+}
+
+#backgroundImage.gifs {
     display: none;
 }
 
@@ -106,7 +118,39 @@ body.show {
     height: 30px;
 }
 
-#shimer2, #shimer1 {
+.feedback_container  {
+    position: absolute;
+    top: 200px;
+    left: 1100px;
+    padding: 1.5rem;
+    /* background-repeat: no-repeat; */
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.socials_container  {
+    position: absolute;
+    top: 150px;
+    left: 900px;
+    padding: 1.5rem;
+    /* background-repeat: no-repeat; */
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+
+.socials_header {
+    transition: all 5s ease-in-out;
+}
+
+#shimer2, #shimer1, #shimer3, #shimer4 {
     position: absolute;
     background-image: url(./Images/shimer.png);
     background-size: contain;
@@ -114,7 +158,7 @@ body.show {
     height: 60px;
 }
 
-    #shimer1 {
+    #shimer1, #shimer3 {
        animation-name: spinAndShineV1;
        animation-duration: 45s;
        animation-iteration-count: infinite;
@@ -122,7 +166,7 @@ body.show {
        transform: scale(0%);
    }
 
-   #shimer2 {
+   #shimer2, #shimer4 {
       animation-name: spinAndShineV2;
       animation-duration: 35s;
       animation-iteration-count: infinite;
@@ -130,19 +174,13 @@ body.show {
       transform: scale(0%);
     }
 
-    #shimer1.hide {
+    #shimer1.hide, #shimer2.hide, #shimer3.hide, #shimer4.hide {
         animation-name: hide;
         animation-duration: 0.7s;
         animation-iteration-count: 1;
         animation-timing-function: ease-in;
     }
     
-    #shimer2.hide {
-        animation-name: hide;
-        animation-duration: 0.7s;
-        animation-iteration-count: 1;
-        animation-timing-function: ease-in;
-    }
 
 .link_button {
     opacity: 0;
@@ -154,37 +192,29 @@ body.show {
     text-decoration: none;
 }
 
-    #gal_links.hide {
+    #gal_links.hide, #home_links.hide, #socal_links.hide, #feed_links.hide {
         display: none;
     }
 
-    #home_links.hide {
-        display: none;
-    }
-
-.gallery_container:hover :nth-child(1){
+.gallery_container:hover :nth-child(1), .homework_container:hover :nth-child(1), .feedback_container:hover :nth-child(1), .socials_container:hover :nth-child(1){
     opacity: 100;
     z-index: 2;
 }
 
-.homework_container:hover :nth-child(1){
-    opacity: 100;
-    z-index: 2;
-}
-
-#link_container1, #link_container2 {
+#link_container1, #link_container2, #link_container3, #link_container4 {
     opacity: 0;
     display: none;
     width: max-content;
     transition: opacity 1s ease-out;
 }
 
-#link_container1 > * , #link_container2 > * {
-    transition: all 1.5s ease-in;
+#link_container1 > * , #link_container2 > *, #link_container3 > * , #link_container4 > * {
+    transition: opacity 1.5s ease-in;
 }
 
 #link_container1.active {
     opacity: 100;
+
     display: flex;
     flex-direction: column;
     font-size: 5rem;
@@ -207,6 +237,37 @@ body.show {
     left: -500px;
 }
 
+#link_container3.active {
+    opacity: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5rem;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 0px;
+    left: -800px;
+    width: max-content;
+    height: 100%;
+}
+
+#link_container4.active {
+    opacity: 100;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 5rem;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 0px;
+    left: -550px;
+    bottom: 0px;
+    right: 0px;
+    height: 100%;
+    width: min-content;
+}
     .link_box {
         display: flex;
         gap: 1.5rem;
@@ -216,8 +277,12 @@ body.show {
         flex-shrink: 1 1 50%;
         width: 700px;
     }
+/* 
+    .link_box > * {
+        transition: all 0.5s ease-in-out;
+    } */
 
-/* Nav BARRRRR */
+/* Nav Bar */
 
 #nav_bar {
     position: fixed;
@@ -228,6 +293,7 @@ body.show {
     display: none;
     background: rgb(0,0,0);
     background: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(255,255,255,0) 100%);
+    z-index: 4;
 }
 
 #nav_bar.show {
@@ -259,25 +325,27 @@ body.show {
 #gifs_links {
     cursor: pointer;
 }
-
+ 
 #gifs_box_container {
-    display: none;
-}
-
-#gifs_box_container.open {
+    top: 1500px;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    z-index: 3;
     display: flex;
-    height: 100%;
     width: 100%;
-    flex-direction: row;
+    height: min-content;
     justify-content: center;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
-    gap: 1rem;
-    flex-basis: 48%;
-    padding: 3rem 0 6rem 0;
+    gap: 3rem;
+    align-items: center;
+    padding: 6rem 0 6rem 0;
     background-color: lightblue;
 }
 
+#gifs_box_container.open {
+    top: 0px;
+}
+
+/*
 #gifs_box_container > * {
     display: flex;
     flex-direction: row;
@@ -287,9 +355,22 @@ body.show {
     max-width: 35rem;
     flex-wrap: wrap;
     flex-basis: 48%;
+} */
+
+.gifs_box_left, .gifs_box_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+    height: 100%;
+    max-width: 35rem;
+    min-width: 17rem;
+    flex-wrap: wrap;
 }
 
 .box {
+    flex: 1 1 17rem;
     width: 17rem;
     height: 17rem;
     position: none;
@@ -302,6 +383,7 @@ body.show {
     font-size: 2rem;
     transition: color 0.4s ease-out;
     background-color: rgb(184, 184, 184);
+    cursor: pointer;
 }
 
 .box_long {
@@ -317,10 +399,6 @@ body.show {
     display: none; 
 }
 
-.box > * {
-
-}
-
 .box:hover > * {
     text-shadow: 10px 10px 20px rgb(0, 0, 0),
     -10px 10px 20px rgb(0, 0, 0),
@@ -332,7 +410,7 @@ body.show {
 }
 
 #GIF1_img {
-    background-image: url(Images/Niks_Zilite_Augs_JPEG.jpeg);
+    background-image: url(Images/Niks_Zilite_Augs_JPEG.jpg);
 }
 
     #GIF1_gif.active {
@@ -345,6 +423,7 @@ body.show {
         background-image: url(GIFs/Niks_Zilite_Augs.gif);
         top: 0;
         left: 0;
+        cursor: pointer;
 
         background-position-y: 50%;
         background-position-x: 50%;
@@ -352,7 +431,7 @@ body.show {
     }
 
     #GIF2_img {
-        background-image: url(Images/Niks_Zilite_VideoGIF_JPEG.jpeg);
+        background-image: url(Images/Niks_Zilite_VideoGIF_JPEG.jpg);
     }
     
         #GIF2_gif {
@@ -369,6 +448,7 @@ body.show {
             background-image: url(GIFs/Niks_Zilite_VideoGIF.gif);
             top: 0;
             left: 0;
+            cursor: pointer;
 
             background-position-y: 50%;
             background-position-x: 50%;
@@ -376,7 +456,7 @@ body.show {
         }
 
         #GIF3_img {
-            background-image: url(Images/NiksZilite_Roto_JPEG.jpeg);
+            background-image: url(Images/NiksZilite_Roto_JPEG.jpg);
         }
         
             #GIF3_gif {
@@ -393,6 +473,7 @@ body.show {
                 background-image: url(GIFs/NiksZilite_Roto.gif);
                 top: 0;
                 left: 0;
+                cursor: pointer;
 
                 background-position-y: 50%;
                 background-position-x: 50%;
@@ -400,7 +481,7 @@ body.show {
             }
 
         #GIF4_img {
-            background-image: url(Images/Niks_Zilite_Masking_JPEG.jpeg);
+            background-image: url(Images/Niks_Zilite_Masking_JPEG.jpg);
             background-size: cover;
         }
         
@@ -413,6 +494,7 @@ body.show {
                 position: fixed;
                 width: 100dvw;
                 height: 100dvh;
+                cursor: pointer;
 
                 background-repeat: no-repeat;
                 background-color: var(--DarkBlue);
@@ -426,7 +508,7 @@ body.show {
             }
 
         #GIF5_img {
-            background-image: url(Images/Animation\ 6FPS_JPEG.jpeg);
+            background-image: url(Images/Animation\ 6FPS_JPEG.jpg);
             background-size: cover;
         }
         
@@ -444,6 +526,7 @@ body.show {
                 background-image: url(GIFs/Animation\ 6FPS.gif);
                 top: 0;
                 left: 0;
+                cursor: pointer;
 
                 background-position-y: 50%;
                 background-position-x: 50%;
