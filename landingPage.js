@@ -193,6 +193,17 @@ function Open_Gifs_Gallery() {
     NavBar.classList.add('show');
 }
 
+// Adding a custom mouse
+
+ClickGallery.addEventListener('mouseover', () => {
+    ClickGallery.classList.add('custom-cursor');
+});
+
+ClickGallery.addEventListener('mouseout', () => {
+    ClickGallery.classList.remove('custom-cursor');
+});
+
+
 // function Close_All() {
 //     floatingAnimation.classList.remove('zoomedIn');
 //     ClickGallery.classList.remove('hide');

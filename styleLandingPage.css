@@ -194,6 +194,7 @@ body.show {
 
     #gal_links.hide, #home_links.hide, #socal_links.hide, #feed_links.hide {
         display: none;
+        cursor: pointer;
     }
 
 .gallery_container:hover :nth-child(1), .homework_container:hover :nth-child(1), .feedback_container:hover :nth-child(1), .socials_container:hover :nth-child(1){
@@ -338,11 +339,13 @@ body.show {
     gap: 3rem;
     align-items: center;
     padding: 6rem 0 6rem 0;
-    background-color: lightblue;
+    background-color: darkslategray;
+    flex-direction: column;
 }
 
 #gifs_box_container.open {
     top: 0px;
+
 }
 
 /*
@@ -370,9 +373,9 @@ body.show {
 }
 
 .box {
-    flex: 1 1 17rem;
-    width: 17rem;
-    height: 17rem;
+    /* flex: 1 1 17rem; */
+    width: 32rem;
+    height: 32rem;
     position: none;
     background-size: contain;
     background-repeat: no-repeat;
@@ -561,4 +564,8 @@ body.show {
     0% { transform: rotate(0deg) scale(0); }
     1% { transform: rotate(0deg) scale(100%); } 
     100% { transform: rotate(360deg) scale(0%); }
+}
+
+.custom-cursor {
+    cursor: url('Images/mouse_normal.png'), auto; /* Custom cursor */
 }
