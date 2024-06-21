@@ -1,29 +1,39 @@
-let cols = 10;  // Number of columns in the grid (doubled)
-let rows = 10;  // Number of rows in the grid (doubled)
-let gridSize = 50;  // Size of each grid cell (adjusted for canvas size)
+let cols = 10;  // Number of columns in the grid
+let rows = 10;  // Number of rows in the grid
+let gridSize = 50;  // Size of each grid cell
+let borderSize = 10;  // Size of the border
 let currentCol = 0;
 let currentRow = 0;
+let loopCount = 0;  // Number of times the grid has been filled
+let canvas;
 
 function setup() {
-  let canvas = createCanvas(cols * gridSize, rows * gridSize);
+  canvas = createCanvas(cols * gridSize + 2 * borderSize, rows * gridSize + 2 * borderSize);
   background(255);
-  centerCanvas(canvas);
-  drawNextShape();
+  centerCanvas();
+  drawBorder();
 }
 
-function centerCanvas(canvas) {
+function centerCanvas() {
   let x = (windowWidth - width) / 2;
   let y = (windowHeight - height) / 2;
   canvas.position(x, y);
 }
 
+function drawBorder() {
+  noFill();
+  stroke(0);
+  strokeWeight(borderSize);
+  rect(borderSize / 2, borderSize / 2, width - borderSize, height - borderSize);
+}
+
 function drawNextShape() {
   let diceRoll = int(random(1, 7));  // Roll a 6-sided dice
-  let x = currentCol * gridSize;
-  let y = currentRow * gridSize;
-  
+  let x = currentCol * gridSize + borderSize;
+  let y = currentRow * gridSize + borderSize;
+
   // Draw the shape based on dice roll
-  switch(diceRoll) {
+  switch (diceRoll) {
     case 1:
       drawHorizontalLine(x, y);
       break;
@@ -43,14 +53,22 @@ function drawNextShape() {
       drawDiagonalTRBL(x, y);
       break;
   }
-  
+
   // Move to the next cell
   currentCol++;
   if (currentCol >= cols) {
     currentCol = 0;
     currentRow++;
     if (currentRow >= rows) {
-      noLoop();  // Stop when the grid is full
+      currentRow = 0;  // Reset to the first row
+      loopCount++;  // Increment the loop count
+      if (loopCount < 3) {
+        background(255);  // Clear the background to see each iteration clearly
+        drawBorder();  // Redraw the border
+      } else {
+        createGrid3x3();
+        noLoop();  // Stop the loop after creating the 3x3 grid
+      }
     }
   }
 }
@@ -77,12 +95,31 @@ function drawDiagonalTRBL(x, y) {
 }
 
 function draw() {
-  // Draw shapes in a loop with a delay to visualize each step
-  if (frameCount % 30 == 0) {
-    drawNextShape();
+  // Draw shapes continuously
+  drawNextShape();
+}
+
+function createGrid3x3() {
+  let img = get();  // Capture the current canvas as an image
+  let newSize = cols * gridSize + 2 * borderSize;  // Size of one grid including border
+  resizeCanvas(newSize * 3, newSize * 3);  // Resize the canvas for the 3x3 grid
+  background(255);
+
+  // Draw the 3x3 grid
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      image(img, i * newSize, j * newSize);
+    }
   }
+
+  let x = (windowWidth - width) / 2;
+  let y = (windowHeight - height) / 2;
+  canvas.position(x, y);
+
+  drawBorder();  // Draw the border around each grid
+  noLoop();  // Stop the loop
 }
 
 function windowResized() {
-  centerCanvas(canvas);
+  centerCanvas();
 }
