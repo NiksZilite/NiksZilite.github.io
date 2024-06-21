@@ -1,51 +1,88 @@
-let cnvWidth, cnvHeight;
-let d1, d2, d3, d4, d5, d6;
-let Dice;
-let m1, m2;
-// , d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20
+let cols = 10;  // Number of columns in the grid (doubled)
+let rows = 10;  // Number of rows in the grid (doubled)
+let gridSize = 50;  // Size of each grid cell (adjusted for canvas size)
+let currentCol = 0;
+let currentRow = 0;
 
 function setup() {
-    let cnv = createCanvas(windowHeight - 100, windowHeight - 100);
-    // cnvWidth = windowWidth - 100;
-    cnvHeight = windowHeight - 150;
-    background(200);
-    cnv.position(windowWidth /2 - (windowHeight - 100) /2, windowHeight /2 - (windowHeight - 100)/ 2);
-    textSize(32);
-
+  let canvas = createCanvas(cols * gridSize, rows * gridSize);
+  background(255);
+  centerCanvas(canvas);
+  drawNextShape();
 }
 
+function centerCanvas(canvas) {
+  let x = (windowWidth - width) / 2;
+  let y = (windowHeight - height) / 2;
+  canvas.position(x, y);
+}
 
-function mouseClicked(){
+function drawNextShape() {
+  let diceRoll = int(random(1, 7));  // Roll a 6-sided dice
+  let x = currentCol * gridSize;
+  let y = currentRow * gridSize;
+  
+  // Draw the shape based on dice roll
+  switch(diceRoll) {
+    case 1:
+      drawHorizontalLine(x, y);
+      break;
+    case 2:
+      drawVerticalLine(x, y);
+      break;
+    case 3:
+      drawCross(x, y);
+      break;
+    case 4:
+      // Leave blank (do nothing)
+      break;
+    case 5:
+      drawDiagonalTLBR(x, y);
+      break;
+    case 6:
+      drawDiagonalTRBL(x, y);
+      break;
+  }
+  
+  // Move to the next cell
+  currentCol++;
+  if (currentCol >= cols) {
+    currentCol = 0;
+    currentRow++;
+    if (currentRow >= rows) {
+      noLoop();  // Stop when the grid is full
+    }
+  }
+}
 
-    background(220);
+function drawHorizontalLine(x, y) {
+  line(x, y + gridSize / 2, x + gridSize, y + gridSize / 2);
+}
 
-    Dice = random(['1', '2', '3', '4', '5', '6']);
-    rNumber = str(Dice);
-    print(Dice);
-    fill('black');
-    text(rNumber, cnvHeight /3 * 2 - 59, cnvHeight / 3 - 100);
+function drawVerticalLine(x, y) {
+  line(x + gridSize / 2, y, x + gridSize / 2, y + gridSize);
+}
 
+function drawCross(x, y) {
+  drawHorizontalLine(x, y);
+  drawVerticalLine(x, y);
+}
 
-    strokeWeight(5)
-    d1 = cnvHeight /3 - 50;
-    d2 = cnvHeight /3 - 50;
-    d5 = cnvHeight /3 * 3 - 50;
-    d6 = cnvHeight /3 * 3 - 50;
-    d3 = cnvHeight /3 * 2 - 50;
-    d4 = cnvHeight /3 * 2 - 50;
+function drawDiagonalTLBR(x, y) {
+  line(x, y, x + gridSize, y + gridSize);
+}
 
-    point(d1, d2);
-    point(d1, d3);
-    point(d1, d5);
+function drawDiagonalTRBL(x, y) {
+  line(x + gridSize, y, x, y + gridSize);
+}
 
-    point(d3, d4);
-    point(d3, d2);
-    point(d3, d6);
+function draw() {
+  // Draw shapes in a loop with a delay to visualize each step
+  if (frameCount % 30 == 0) {
+    drawNextShape();
+  }
+}
 
-    point(d5, d6);
-    point(d5, d2);
-    point(d5, d4);
-
-
-    // line(d1, d2, d1, d3);
+function windowResized() {
+  centerCanvas(canvas);
 }
