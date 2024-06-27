@@ -1,6 +1,11 @@
 * {
     margin: 0;
     color: white;
+    text-decoration: none;
+
+    font-family: "Zhi Mang Xing", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 a {
@@ -13,6 +18,8 @@ body {
     height: 100%;
     width: 100%;
     overflow: hidden;
+
+
 }
 
 body.show {
@@ -27,6 +34,10 @@ body.show {
 
 } */
 
+#phone_nav {
+    display: none;
+}
+
 #backgroundStars {
     height: 200%;
     width: 200%;
@@ -35,7 +46,7 @@ body.show {
     left: 0;
     background-image: url(./Images/stars.png);
     background-size: contain;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     transition: transform 1.5s ease-out;
     display: inline;
 
@@ -50,7 +61,7 @@ body.show {
 }
 
     #backgroundStars.zoomedIn {
-        animation-duration: 2s;
+        animation-duration: 5s;
     }
 
 #backgroundImage {
@@ -92,8 +103,8 @@ body.show {
 
 .gallery_container  {
     position: absolute;
-    top: 150px;
-    left: 150px;
+    top: 250px;
+    left: 250px;
     padding: 1.5rem;
     /* background-repeat: no-repeat; */
     opacity: 100;
@@ -106,8 +117,8 @@ body.show {
 
 .homework_container  {
     position: absolute;
-    top: 280px;
-    left: 730px;
+    top: 560px;
+    left: 760px;
     padding: 1.5rem;
     /* background-repeat: no-repeat; */
     opacity: 100;
@@ -120,8 +131,8 @@ body.show {
 
 .feedback_container  {
     position: absolute;
-    top: 200px;
-    left: 1100px;
+    top: 310px;
+    left: 1450px;
     padding: 1.5rem;
     /* background-repeat: no-repeat; */
     opacity: 100;
@@ -154,8 +165,8 @@ body.show {
     position: absolute;
     background-image: url(./Images/shimer.png);
     background-size: contain;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
     #shimer1, #shimer3 {
@@ -234,7 +245,7 @@ body.show {
     justify-content: space-between;
 
     position: absolute;
-    top: -200px;
+    top: -400px;
     left: -500px;
 }
 
@@ -248,7 +259,7 @@ body.show {
 
     position: absolute;
     top: 0px;
-    left: -800px;
+    left: -1300px;
     width: max-content;
     height: 100%;
 }
@@ -263,7 +274,7 @@ body.show {
 
     position: absolute;
     top: 0px;
-    left: -550px;
+    left: -750px;
     bottom: 0px;
     right: 0px;
     height: 100%;
@@ -276,7 +287,7 @@ body.show {
         flex-wrap: wrap;
         padding-top: 3.5rem;
         flex-shrink: 1 1 50%;
-        width: 700px;
+        width: 85vw;
     }
 /* 
     .link_box > * {
@@ -332,7 +343,7 @@ body.show {
     transition: all 1s ease-in-out;
     position: absolute;
     z-index: 3;
-    display: flex;
+    display: none;
     width: 100%;
     height: min-content;
     justify-content: center;
@@ -345,7 +356,7 @@ body.show {
 
 #gifs_box_container.open {
     top: 0px;
-
+    display: flex;
 }
 
 /*
@@ -568,4 +579,210 @@ body.show {
 
 .custom-cursor {
     cursor: url('Images/mouse_normal.png'), auto; /* Custom cursor */
+}
+
+@media only screen and (max-width: 1080px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    #shimer2, #shimer1, #shimer3, #shimer4 {
+
+        width: 60px;
+        height: 60px;
+    }
+
+    .gallery_container  {
+        top: 150px;
+        left: 100px;
+    }
+    
+    .homework_container  {
+        top: 320px;
+        left: 450px;
+    }
+    
+    .feedback_container  {
+        top: 200px;
+        left: 800px;
+    }
+    
+    .socials_container  {
+        top: 150px;
+        left: 600px;
+    }
+    
+    #backgroundImage {
+        height: 170%;
+        width: 120%;
+    }
+
+    #backgroundImage.gallery {
+        transform: scale(250%) translateX(400px) translateY(400px);
+    }
+    
+    #backgroundImage.homework {
+        transform: scale(300%) translateX(0px) translateY(200px);
+    }
+    
+    #backgroundImage.feedback {
+        transform: scale(250%) translateX(-400px) translateY(250px);
+    }
+    
+    #backgroundImage.socials {
+        transform: scale(300%) translateX(-200px) translateY(360px);
+    }
+
+    #nav_bar {
+        top: 0;
+        font-size: 150%;
+        width: 100vw;
+    }
+
+    .gallery_container :nth-child(1), .homework_container :nth-child(1), .feedback_container :nth-child(1), .socials_container :nth-child(1){
+        opacity: 100;
+        z-index: 2;
+    }
+
+    #link_container1.active {
+        top: 150px;
+        left: 50px;
+    }
+    
+    #link_container2.active {
+
+        top: -30px;
+        left: -250px;
+    }
+    
+    #link_container3.active {
+ 
+        top: 150px;
+        left: -720px;
+
+    }
+    
+    #link_container4.active {
+
+        top: 100px;
+        left: -500px;
+        bottom: 0px;
+        right: 0px;
+
+  }
+
+  @media only screen and (max-width: 425px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    #shimer2, #shimer1, #shimer3, #shimer4 {
+
+        width: 30px;
+        height: 30px;
+    }
+
+    .gallery_container  {
+        top: 60px;
+        left: 100px;
+    }
+    
+    .homework_container  {
+        top: 200px;
+        left: 200px;
+    }
+    
+    .feedback_container  {
+        top: 450px;
+        left: 60px;
+    }
+    
+    .socials_container  {
+        top: 650px;
+        left: 270px;
+    }
+    
+    #backgroundImage {
+        height: 170%;
+        width: 120%;
+    }
+
+    #backgroundImage.gallery {
+        transform: scale(250%) translateX(130px) translateY(500px);
+    }
+    
+    #backgroundImage.homework {
+        transform: scale(300%) translateX(0px) translateY(400px);
+    }
+    
+    #backgroundImage.feedback {
+        transform: scale(250%) translateX(200px) translateY(0px);
+    }
+    
+    #backgroundImage.socials {
+        transform: scale(300%) translateX(-100px) translateY(-300px);
+    }
+
+    #nav_bar {
+display: none !important;
+    }
+
+    #phone_nav {
+        display: none;
+        top: 0;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px;
+        background: rgb(0,0,0);
+        background: linear-gradient(0deg, rgba(0,0,0,1) 5%, rgba(255,255,255,0) 100%);
+        font-size: 30px;
+
+    }
+
+    #phone_nav.show {
+        display: flex;
+        justify-content: center;
+    }
+
+    #phone_nav > * {
+        z-index: 10;
+        cursor: pointer;
+    }
+
+    .gallery_container :nth-child(1), .homework_container :nth-child(1), .feedback_container :nth-child(1), .socials_container :nth-child(1){
+        opacity: 100;
+        z-index: 2;
+    }
+
+    
+    #link_container1.active {
+        top: 150px;
+        left: 0px;
+    }
+    
+    #link_container2.active {
+
+        top: -30px;
+        left: -120px;
+    }
+    
+    #link_container3.active {
+ 
+        top: -200px;
+        left: -25px;
+
+    }
+    
+    #link_container4.active {
+
+        top: -300px;
+        left: -240px;
+        bottom: 0px;
+        right: 0px;
+        font-size: 45px;
+    }
+  }
 }

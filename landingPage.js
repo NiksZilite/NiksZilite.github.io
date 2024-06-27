@@ -10,7 +10,7 @@ const HomeworkLinks = document.getElementById('link_container2');
 const FeedbackLinks = document.getElementById('link_container3');
 const SocialsLinks = document.getElementById('link_container4');
 
-const overflowControl = document.getElementById('overflow'); // For gif gallerys that needs "overflow: vidiblr"
+const overflowControl = document.getElementById('overflow'); // For gif gallerys that needs "overflow: vidible"
 const backgroundImage = document.getElementById('backgroundImage');
 
 const Shimer1 = document.getElementById('shimer1');
@@ -19,7 +19,9 @@ const Shimer3 = document.getElementById('shimer3');
 const Shimer4 = document.getElementById('shimer4');
 
 const NavBar = document.getElementById('nav_bar');
+const NavBar2 = document.getElementById('phone_nav');
 const MainPageButton = document.getElementById('MainPageButton');
+const MainPageButton2 = document.getElementById('MainPageButton2');
 const GalleryButton = document.getElementById('GalleryButton');
 const HomeworkButton = document.getElementById('HomeworkButton');
 const FeedbackButton = document.getElementById('FeedbackButton');
@@ -51,6 +53,7 @@ function Hide_All_Shimers(){
 }
 
 function Open_Gallery_Links() {
+
     Hide_All_Shimers();
     backgroundImage.classList.add('gallery');
         // Setup for navigation bar
@@ -59,10 +62,12 @@ function Open_Gallery_Links() {
         backgroundImage.classList.remove('socials');
     GalleryLinks.classList.add('active');
     NavBar.classList.add('show');
+    NavBar2.classList.add('show');
     floatingAnimation.classList.add('zoomedIn');
 }
 
 function Open_Homework_Links() {
+
     Hide_All_Shimers();
     backgroundImage.classList.add('homework');
         // Setup for navigation bar
@@ -71,6 +76,7 @@ function Open_Homework_Links() {
         backgroundImage.classList.remove('socials');
     HomeworkLinks.classList.add('active');
     NavBar.classList.add('show');
+    NavBar2.classList.add('show');
     floatingAnimation.classList.add('zoomedIn');
 }
 
@@ -83,6 +89,7 @@ function Open_Feedback_Links() {
         backgroundImage.classList.remove('socials');
     FeedbackLinks.classList.add('active');
     NavBar.classList.add('show');
+    NavBar2.classList.add('show');
     floatingAnimation.classList.add('zoomedIn');
 }
 
@@ -95,6 +102,7 @@ function Open_Socials_Links() {
         backgroundImage.classList.remove('gallery');
     SocialsLinks.classList.add('active');
     NavBar.classList.add('show');
+    NavBar2.classList.add('show');
     floatingAnimation.classList.add('zoomedIn');
 }
 
@@ -117,6 +125,7 @@ function Show_All_Shimers(){
 }
 
 MainPageButton.addEventListener('click', Close_All);
+MainPageButton2.addEventListener('click', Close_All);
 
 function Close_All() {
     backgroundImage.classList.add('main');
@@ -125,6 +134,7 @@ function Close_All() {
     FeedbackLinks.classList.remove('active');
     SocialsLinks.classList.remove('active');
     NavBar.classList.remove('show');
+    NavBar2.classList.remove('show');
     Show_All_Shimers();
     floatingAnimation.classList.remove('zoomedIn');
     floatingAnimation.classList.remove('hide');
@@ -145,9 +155,11 @@ SocialsButton.addEventListener('click', NavOpen_Socials);
 function NavOpen_Gallery() {
     if (GalleryLinks.classList.contains('active')) {
         Close_All();
+
     } else {
         Close_All();
         Open_Gallery_Links();
+
     }
 }
 
