@@ -3,12 +3,14 @@ const GIF2_link = document.getElementById('GIF2_img');
 const GIF3_link = document.getElementById('GIF3_img');
 const GIF4_link = document.getElementById('GIF4_img');
 const GIF5_link = document.getElementById('GIF5_img');
+const GIF6_link = document.getElementById('GIF6_img');
 
 const GIF1_GIF = document.getElementById('GIF1_gif');
 const GIF2_GIF = document.getElementById('GIF2_gif');
 const GIF3_GIF = document.getElementById('GIF3_gif');
 const GIF4_GIF = document.getElementById('GIF4_gif');
 const GIF5_GIF = document.getElementById('GIF5_gif');
+const GIF6_GIF = document.getElementById('GIF6_gif');
 
 function Open_Gif_1() {
     GIF1_GIF.classList.toggle('active');
@@ -44,3 +46,11 @@ function Open_Gif_5() {
 
 GIF5_link.addEventListener('click', Open_Gif_5);
 GIF5_GIF.addEventListener('click', Open_Gif_5);
+
+
+function Open_Gif_6() {
+    GIF6_GIF.classList.toggle('active');
+}
+
+GIF6_link.addEventListener('click', Open_Gif_6);
+GIF6_GIF.addEventListener('click', Open_Gif_6);

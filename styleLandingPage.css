@@ -82,15 +82,15 @@ body.show {
 }
 
 #backgroundImage.gallery {
-    transform: scale(250%) translateX(600px) translateY(170px);
+    transform: scale(250%) translateX(600px) translateY(250px);
 }
 
 #backgroundImage.homework {
-    transform: scale(300%) translateX(-100px) translateY(50px);
+    transform: scale(300%) translateX(-100px) translateY(0px);
 }
 
 #backgroundImage.feedback {
-    transform: scale(250%) translateX(-800px) translateY(170px);
+    transform: scale(250%) translateX(-700px) translateY(300px);
 }
 
 #backgroundImage.socials {
@@ -222,6 +222,7 @@ body.show {
 
 #link_container1 > * , #link_container2 > *, #link_container3 > * , #link_container4 > * {
     transition: opacity 1.5s ease-in;
+    gap: 100px;
 }
 
 #link_container1.active {
@@ -359,6 +360,56 @@ body.show {
     display: flex;
 }
 
+#art_links {
+    cursor: pointer;
+}
+ 
+#art_box_container {
+    top: 1500px;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    z-index: 3;
+    display: none;
+    width: 100%;
+    height: min-content;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    padding: 6rem 0 6rem 0;
+    background-color: darkslategray;
+    flex-direction: column;
+}
+
+#art_box_container.open {
+    top: 0px;
+    display: flex;
+}
+
+#photo_links {
+    cursor: pointer;
+}
+ 
+#photo_box_container {
+    top: 1500px;
+    transition: all 1s ease-in-out;
+    position: absolute;
+    z-index: 3;
+    display: none;
+    width: 100%;
+    height: min-content;
+    justify-content: center;
+    gap: 3rem;
+    align-items: center;
+    padding: 6rem 0 6rem 0;
+    background-color: darkslategray;
+    flex-direction: column;
+}
+
+#photo_box_container.open {
+    top: 0px;
+    display: flex;
+}
+
 /*
 #gifs_box_container > * {
     display: flex;
@@ -403,6 +454,11 @@ body.show {
 .box_long {
     width: 35rem;
 }
+
+.box_wide {
+    width: 60rem;
+}
+
 
 .box > :nth-child(1) {
     flex: 90%;
@@ -522,7 +578,7 @@ body.show {
             }
 
         #GIF5_img {
-            background-image: url(Images/Animation\ 6FPS_JPEG.jpg);
+            background-image: url(Images/Niks_Zilite_12_Principi.jpeg);
             background-size: cover;
         }
         
@@ -537,15 +593,43 @@ body.show {
                 height: 100dvh;
                 background-repeat: no-repeat;
                 background-color: var(--DarkBlue);
-                background-image: url(GIFs/Animation\ 6FPS.gif);
+                background-image: url(GIFs/Niks_Zilite_12_Principi.gif);
                 top: 0;
                 left: 0;
                 cursor: pointer;
 
                 background-position-y: 50%;
                 background-position-x: 50%;
-                background-size: 90vw;
+                background-size: 45vw;
             }
+
+            #GIF6_img {
+                background-image: url(Images/Niks_Zilite_Tween.jpeg);
+                background-size: cover;
+            }
+
+            #GIF6_gif {
+                display: none;
+            }
+        
+            #GIF6_gif.active {
+                display: inline-block;
+                position: fixed;
+                width: 100dvw;
+                height: 100dvh;
+                cursor: pointer;
+
+                background-repeat: no-repeat;
+                background-color: var(--DarkBlue);
+                background-image: url(GIFs/Niks_Zilite_Tween.gif);
+                top: 0;
+                left: 0;
+
+                background-position-y: 50%;
+                background-position-x: 50%;
+                background-size: 80vw;
+            }
+
 
 /* Animations */
 

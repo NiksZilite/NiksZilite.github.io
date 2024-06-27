@@ -1,12 +1,16 @@
 const ClickGallery = document.getElementById('gal_links');
 const ClickHomework = document.getElementById('home_links');
     const ClickGifs = document.getElementById('gifs_links');
+    const ClickArt = document.getElementById('art_links');
+    const ClickPhoto = document.getElementById('photo_links');
 const ClickFeedback = document.getElementById('feed_links');
 const ClickSocials= document.getElementById('socal_links');
 
 const GalleryLinks = document.getElementById('link_container1');
 const HomeworkLinks = document.getElementById('link_container2');
     const GifsGallery = document.getElementById('gifs_box_container');
+    const ArtGallery = document.getElementById('art_box_container');
+    const PhotoGallery = document.getElementById('photo_box_container');
 const FeedbackLinks = document.getElementById('link_container3');
 const SocialsLinks = document.getElementById('link_container4');
 
@@ -140,6 +144,9 @@ function Close_All() {
     floatingAnimation.classList.remove('hide');
     // For gifs gallery
     GifsGallery.classList.remove('open');
+    ArtGallery.classList.remove('open');
+    PhotoGallery.classList.remove('open');
+    ArtGallery.classList.remove('open');
     overflowControl.classList.remove('show');
     backgroundImage.classList.remove('gifs');
     document.documentElement.scrollTop = 0;
@@ -205,6 +212,32 @@ function Open_Gifs_Gallery() {
     NavBar.classList.add('show');
 }
 
+ClickArt.addEventListener('click', Open_Art_Gallery);
+
+function Open_Art_Gallery() {
+    Close_All();
+    // backgroundImage.classList.remove('homework');
+    // // backgroundImage.classList.add('gifs');   // REMOVE IN CSS
+    // HomeworkLinks.classList.remove('active');
+    ArtGallery.classList.add('open');
+    overflowControl.classList.add('show');
+    floatingAnimation.classList.add('hide');
+    NavBar.classList.add('show');
+}
+
+
+ClickPhoto.addEventListener('click', Open_Photo_Gallery);
+
+function Open_Photo_Gallery() {
+    Close_All();
+    // backgroundImage.classList.remove('homework');
+    // // backgroundImage.classList.add('gifs');   // REMOVE IN CSS
+    // HomeworkLinks.classList.remove('active');
+    PhotoGallery.classList.add('open');
+    overflowControl.classList.add('show');
+    floatingAnimation.classList.add('hide');
+    NavBar.classList.add('show');
+}
 // Adding a custom mouse
 
 ClickGallery.addEventListener('mouseover', () => {
