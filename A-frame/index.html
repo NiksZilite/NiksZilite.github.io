@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+
+        <a-assets>
+            <a-asset-item id="galva" src="galva.glb"></a-asset-item>
+            <a-asset-item id="acs" src="human_eye.glb"></a-asset-item>
+            <img id="sky" src="./sky.jpg">
+            <img id="img1" src="./cat1.png">
+            <img id="img2" src="./cat2.png">
+            <img id="img3" src="./cat3.png">
+        </a-assets>
+    
+    
+        <a-sky src="./sky.jpg" animation="property: rotation; to: -360 -360 0; easing: linear; loop: true; dur: 500000"></a-sky>
+                
+    
+            <a-image src="#img1" position="-450 100 0" width="1" height="1" scale="200 200 200" rotation="0 90 0"></a-image>
+            <a-image src="#img2" position="0 -50 -450" width="1" height="1" scale="150 150 150" rotation="0 0 0"></a-image>
+            <a-image src="#img3" position="-100 0 450" width="1" height="1" scale="150 150 150" rotation="0 0 0"></a-image>
+        <a-entity position="100 -180 0" rotation="0 240 0">
+            <!-- <a-entity material="color: yellow" position="0 200 0" geometry="primitive: sphere; radius: 30;"></a-entity> -->
+            <!-- <a-entity light=" type: point; intensity: 100;" position="0 0 10"></a-entity> -->
+            <a-entity gltf-model="#galva" position="-25 -50 -30" rotation="0 0 0" scale="20 20 20" spinning="true"></a-entity>
+            
+            <!-- <a-sphere material="color: yellow" radius="20" position="0 0 -150" light="type: point; intensity: 20.0"></a-sphere> -->
+    
+            <a-entity position="0 200 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 10000" es>
+                <!-- <a-sphere color="#CCC" radius="5" position="80 0 0" material="color: yellow"></a-sphere> -->
+                <a-entity gltf-model="#acs" position="80 0 0" scale="5 5 5" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 10000"></a-entity>
+            </a-entity>
+
+            <a-entity position="0 200 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 100000" es>
+                <!-- <a-sphere color="#CCC" radius="5" position="80 0 0" material="color: yellow"></a-sphere> -->
+                <a-entity gltf-model="#acs" position="300 0 0" scale="25 25 25" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 5000"></a-entity>
+            </a-entity>
+    <!-- 
+            <a-entity position="0 0 -150" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 25000" es>
+                <a-sphere color="purple" radius="9" position="65 0 0"></a-sphere>
+            </a-entity> -->
+    
+            <a-entity position="0 200 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 25000" es>
+                <a-entity geometry="primitive: sphere; radius: 9;" position="0 0 120" rotation="0 0 0" material="color: teal" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 3000" es>
+                    <a-sphere color="#CCC" radius="2" position="20 0 0"></a-sphere>
+                </a-entity>
+            </a-entity>
+    
+            <a-entity position="0 200 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 53000" es>
+                <a-entity geometry="primitive: sphere; radius: 11;" position="0 0 200" rotation="0 0 0" material="color: orange" animation="property: rotation; to: 0 0 0; easing: linear; loop: true; dur: 3000" es>
+                    <!-- <a-ring color="#CCC" radius="50" position="20 0 0"></a-ring> -->
+                    <a-entity geometry="primitive: torus; radius: 18; radiusTubular: 0.8;" color="teal" rotation="90"></a-entity>
+                </a-entity>
+            </a-entity>
+
+            <a-entity position="0 200 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 10000"  es>
+                <a-sphere color="#CCC" radius="5" position="0 0 300" material="color: blue"></a-sphere>
+                <a-sphere color="#CCC" radius="5" position="15 5 290" material="color: blue"></a-sphere>
+                <a-sphere color="#CCC" radius="5" position="10 -5 310" material="color: blue"></a-sphere>
+
+                <a-sphere color="#CCC" radius="5" position="5 10 280" material="color: blue"></a-sphere>
+                <a-sphere color="#CCC" radius="5" position="20 5 280" material="color: blue"></a-sphere>
+                <a-sphere color="#CCC" radius="5" position="10 0 315" material="color: blue"></a-sphere>
+            </a-entity>
+        </a-entity>
+    
+        </a-scene>
+</body>
+</html>

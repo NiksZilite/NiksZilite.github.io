@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./aframe.min.js"></script>
+
+    <title>A-frame</title>
+</head>
+<body>
+
+    <a-scene>
+
+        
+    <a-sky color="black"><a-sky>
+            
+        <a-box color="red" position="0 2 -5" rotation="0 45 45" scale="2 2 2"></a-box>
+        
+        <a-entity light=" type: point; intensity: 1.5;" position="0 0 10"></a-entity>
+        <a-entity material="color: yellow" position="0 200 0" geometry="primitive: sphere; radius: 30;"></a-entity>
+        
+        <!-- <a-sphere material="color: yellow" radius="20" position="0 0 -150" light="type: point; intensity: 20.0"></a-sphere> -->
+
+        <a-entity position="0 200 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 10000" es>
+            <a-sphere color="#CCC" radius="5" position="40 0 0"></a-sphere>
+        </a-entity>
+<!-- 
+        <a-entity position="0 0 -150" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 25000" es>
+            <a-sphere color="purple" radius="9" position="65 0 0"></a-sphere>
+        </a-entity> -->
+
+        <a-entity position="0 200 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 25000" es>
+            <a-entity geometry="primitive: sphere; radius: 9;" position="0 0 75" rotation="0 0 0" material="color: teal" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 3000" es>
+                <a-sphere color="#CCC" radius="2" position="20 0 0"></a-sphere>
+            </a-entity>
+        </a-entity>
+
+        <a-entity position="0 200 0" rotation="0 0 0" animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 53000" es>
+            <a-entity geometry="primitive: sphere; radius: 11;" position="0 0 150" rotation="0 0 0" animation="property: rotation; to: 0 0 0; easing: linear; loop: true; dur: 3000" es>
+                <!-- <a-ring color="#CCC" radius="50" position="20 0 0"></a-ring> -->
+                <a-entity geometry="primitive: torus; radius: 18; radiusTubular: 0.8;" color="teal" rotation="90"></a-torus>
+            </a-entity>
+        </a-entity>
+
+      </a-scene>
+    
+</body>
+</html>

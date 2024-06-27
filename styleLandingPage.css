@@ -19,7 +19,6 @@ body {
     width: 100%;
     overflow: hidden;
 
-
 }
 
 body.show {
@@ -66,7 +65,7 @@ body.show {
 
 #backgroundImage {
     height: 150%;
-    width: 100%;
+    width: 120%;
     position: absolute;
     top: 0;
     left: 0;
@@ -698,8 +697,11 @@ body.show {
     }
     
     #backgroundImage {
-        height: 170%;
+        top: 100px;
+        left: -70px;
+        height: 150%;
         width: 120%;
+
     }
 
     #backgroundImage.gallery {
@@ -794,16 +796,19 @@ body.show {
     }
     
     #backgroundImage {
-        height: 170%;
-        width: 120%;
+        top: 0px;
+        left: -100px;
+        height: 150%;
+        width: 150%;
+        background-image: url(./Images/cut\ the\ ego\ new_phone.png);
     }
 
     #backgroundImage.gallery {
-        transform: scale(250%) translateX(130px) translateY(500px);
+        transform: scale(250%) translateX(-50px) translateY(400px);
     }
     
     #backgroundImage.homework {
-        transform: scale(300%) translateX(0px) translateY(400px);
+        transform: scale(300%) translateX(-100px) translateY(250px);
     }
     
     #backgroundImage.feedback {
