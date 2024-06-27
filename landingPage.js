@@ -210,6 +210,7 @@ function Open_Gifs_Gallery() {
     overflowControl.classList.add('show');
     floatingAnimation.classList.add('hide');
     NavBar.classList.add('show');
+    NavBar2.classList.add('show');
 }
 
 ClickArt.addEventListener('click', Open_Art_Gallery);
@@ -223,6 +224,7 @@ function Open_Art_Gallery() {
     overflowControl.classList.add('show');
     floatingAnimation.classList.add('hide');
     NavBar.classList.add('show');
+    NavBar2.classList.add('show');
 }
 
 
@@ -237,6 +239,7 @@ function Open_Photo_Gallery() {
     overflowControl.classList.add('show');
     floatingAnimation.classList.add('hide');
     NavBar.classList.add('show');
+    NavBar2.classList.add('show');
 }
 // Adding a custom mouse
 

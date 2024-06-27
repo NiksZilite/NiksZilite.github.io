@@ -758,6 +758,11 @@ body.show {
 
   @media only screen and (max-width: 425px) {
 
+    .link_box {
+        flex-direction: column;
+
+    }
+
     html {
         font-size: 12px;
     }
@@ -867,6 +872,52 @@ display: none !important;
         bottom: 0px;
         right: 0px;
         font-size: 45px;
+    }
+
+    #GIF1_gif.active {
+        background-size: 40vh;
+    }
+
+    
+    #GIF2_gif.active {
+        background-size: 40vh;
+    }
+
+    
+    #GIF3_gif.active {
+        background-size: 40vh;
+    }
+
+    
+    #GIF4_gif.active {
+        width: 100vh;
+        height: 100vw;
+        background-position-y: 0;
+        background-position-x: 0;
+        background-size: 70vh;
+        rotate: 90deg;
+        top: 35% !important;
+        left: -55% !important;
+    }
+
+    
+    #GIF5_gif.active {
+        background-size: 40vh;
+    }
+    
+    #GIF6_gif.active {
+        width: 100vh;
+        height: 100vw;
+        background-position-y: 0;
+        background-position-x: 0;
+        background-size: 70vh;
+        rotate: 90deg;
+        top: 55% !important;
+        left: -55% !important;
+    }
+
+    .box_wide {
+        width: 30rem;
     }
   }
 }
