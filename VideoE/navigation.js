@@ -1,5 +1,6 @@
 const audio_button = document.getElementById('audio_button');
 let x = 0;
+const navigation_button = document.querySelectorAll('.navigation_button');
 const END = document.getElementById('END');
   const END_N1 = document.getElementById('END_N1');
   const END_N2 = document.getElementById('END_N2');
@@ -984,12 +985,27 @@ function delay(ms) {
       }
 
 
+// keypresses
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'r' || event.key === 'R') {
+        turnRed();
+      } else if (event.key === 'e' || event.key === 'E') {
+        startEnding();
+      }
+    });
+
+    function turnRed(){
+    // navigation_button.classList.toggle('active');
+    navigation_button.forEach(navigation_button => navigation_button.classList.toggle('active'));
+    }
+
 //ENDINGGGGGGGGGGGGGGGGG YASSSSSSSSSSSSSSSSSSSSSSSSS//
 
 
     function countSteps() {
       x += 1;
-      if (x === 6) {
+      if (x === 100) {
         startEnding();
       }
     }
