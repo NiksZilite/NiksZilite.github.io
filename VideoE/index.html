@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang = "eng">
+    <head>
+        <title>NZ_Videospēle</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width", inital-sclae="1.0">
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+
+ <!-- oncontextmenu="return false;" -->
+    <body> 
+
+        <div id="fadeIN"></div>
+
+        <div class="video_box">
+            <div id="audio_button" onclick="loopAudio()"></div>
+
+            <img id="END" src="./GIFs/END.webp" draggable="false">
+
+                <img id="END_N1" src="./GIFs/ALL_BASH.webp" onclick="startBlackoutOnce(); N2()" draggable="false">
+
+                    <img id="END_N2" src="./GIFs/ALL_BASH.webp" onclick="startBlackoutOnce(); N3()" draggable="false">
+
+                        <img id="END_N3" src="./GIFs/ALL_BASH.webp" onclick="startBlackoutOnce(); N4()" draggable="false">
+
+                            <img id="END_N4" src="./GIFs/ALL_BASH.webp" draggable="false" onclick="startBlackoutOnce(); N4()">
+
+                                <img id="END_N5" src="./GIFs/ALL_BASH.webp" draggable="false" onclick="startBlackoutOnce(); N5()">
+
+                                    <img id="END_N6" src="./GIFs/ALL_BASH.webp" draggable="false" onclick="startBlackoutOnce(); N5()">
+
+                                        <img id="END_N7" src="./GIFs/ALL_BASH.webp" draggable="false" onclick="startBlackoutOnce(); N5()">
+
+                                            <img id="END_N8" src="./GIFs/ALL_BASH.webp" draggable="false" onclick="startBlackoutOnce(); N6()">
+
+                                                <img id="END_N9" src="./GIFs/ALL_BASH.webp" draggable="false" onclick="startBlackoutOnce(); N6()">
+
+                                                     <img id="END_N10" src="./GIFs/ALL_BASH.webp" draggable="false" onclick="startBlackoutOnce(); N6()">
+
+                                                         <img id="END_N11" src="./GIFs/ALL_BASH.webp" draggable="false" onclick="startBlackoutOnce(); N6()">
+
+                <img id="END_END" src="./GIFs/A.webp" draggable="false" onclick="startBlackoutOnce(); reset()">
+
+
+
+            <img id="A" src="./GIFs/A.webp" alt="This page requares visible GIFs to work." draggable="false">
+
+                <div id="A2F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="A2F" draggable="false">
+                    <source src="./Video/A2F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+                <div id="A2B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="A2B" draggable="false">
+                    <source src="./Video/A2B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+                <div id="A1S_N" class="navigation_button" onclick="startBlackoutOnce(); countSteps()"></div>
+                    <img id="A1S" src="./GIFs/A1S.webp" alt="This page requares visible GIFs to work." draggable="false" onclick="startBlackoutOnce(); countSteps()">
+
+
+
+            <img id="B" src="./GIFs/B.webp" alt="This page requares visible GIFs to work." draggable="false">
+                
+                <div id="B1S_N" class="navigation_button" onclick="startBlackoutOnce(); countSteps()"></div>
+                    <img id="B1S" src="./GIFs/B1S.webp" alt="This page requares visible GIFs to work." draggable="false" onclick="startBlackoutOnce(); countSteps()">
+
+                <div id="B2F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="B2F" draggable="false">
+                    <source src="./Video/B2F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+                <div id="B2B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="B2B" draggable="false">
+                    <source src="./Video/B2B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+                <div id="B3F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="B3F" draggable="false">
+                    <source src="./Video/B3F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+                <div id="B3B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="B3B" draggable="false">
+                    <source src="./Video/B3B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+
+            <img id="C" src="./GIFs/C.webp" alt="This page requares visible GIFs to work." draggable="false"> 
+
+                <div id="C1S_N" class="navigation_button" onclick="startBlackoutTwice(); playWalkToUpe(); countSteps()"></div> 
+                    <video id="C1S_F" draggable="false">
+                    <source src="./Video/C1S_F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                    <video id="C1S_B" draggable="false">
+                    <source src="./Video/C1S_B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                    <img id="C1S" src="./GIFs/C1S.webp" alt="This page requares visible GIFs to work." draggable="false" onclick="startBlackoutTwice(); playWalk(); stopUpe(); countSteps()">
+
+                <div id="C2F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="C2F" draggable="false">
+                    <source src="./Video/C2F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                 <div id="C2B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="C2B" draggable="false">
+                    <source src="./Video/C2B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+                <div id="C3F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="C3F" draggable="false">
+                    <source src="./Video/C3F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                <div id="C3B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="C3B" draggable="false">
+                    <source src="./Video/C3B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+
+            <img id="D" src="./GIFs/D.webp" alt="This page requares visible GIFs to work."draggable="false"> 
+
+            <img id="E" src="./GIFs/E.webp" alt="This page requares visible GIFs to work."draggable="false">
+                <div id="E1F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="E1F" draggable="false">
+                    <source src="./Video/E1F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                <div id="E1B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="E1B" draggable="false">
+                    <source src="./Video/E1B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+            <img id="H" src="./GIFs/H.webp" alt="This page requares visible GIFs to work." draggable="false"> 
+                <div id="H1S_N" class="navigation_button" onclick="startBlackoutOnce(); playUpe(); countSteps()"></div>
+                    <img id="H1S" src="./GIFs/H1S.webp" alt="This page requares visible GIFs to work." draggable="false" onclick="startBlackoutOnce(); stopUpe(); countSteps()">
+
+                <div id="H2F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="H2F" draggable="false">
+                    <source src="./Video/H2F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+                <div id="H2B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="H2B" draggable="false">
+                    <source src="./Video/H2B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+            <img id="I" src="./GIFs/I.webp" alt="This page requares visible GIFs to work." draggable="false"> 
+                <div id="I1F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="I1F" draggable="false">
+                    <source src="./Video/I1F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                <div id="I1B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="I1B" draggable="false">
+                    <source src="./Video/I1B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+            <img id="M" src="./GIFs/M.webp" alt="This page requares visible GIFs to work." draggable="false"> 
+                <div id="M1F_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="M1F" draggable="false">
+                    <source src="./Video/M1F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                <div id="M1B_N" class="navigation_button" onclick="startBlackoutTwice(); playWalk(); countSteps()"></div> 
+                    <video id="M1B" draggable="false">
+                    <source src="./Video/M1B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+                <div id="M2F_N" class="navigation_button" onclick="startBlackoutOnce(); stopAudio(); loopJuraAudio(); countSteps()"></div> 
+
+                <div id="M2B_N" class="navigation_button" onclick="startBlackoutOnce(); stopJuraAudio(); loopAudio(); countSteps()"></div> 
+
+
+            <img id="G" src="./GIFs/G.webp" alt="This page requares visible GIFs to work." draggable="false">
+                <div id="G1S_N" class="navigation_button" onclick="startBlackoutOnce(); countSteps()"></div>
+                    <img id="G1S" src="./GIFs/G1S.webp" alt="This page requares visible GIFs to work." draggable="false" onclick="startBlackoutOnce(); countSteps()">
+
+            <img id="L" src="./GIFs/L.webp" alt="This page requares visible GIFs to work." draggable="false">
+                <div id="L1F_N" class="navigation_button" onclick="startBlackoutTwice(); playJura()"></div> 
+                    <video id="L1F" draggable="false">
+                    <source src="./Video/L1F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                <div id="L1B_N" class="navigation_button" onclick="startBlackoutTwice(); playJura(); countSteps()"></div> 
+                    <video id="L1B" draggable="false">
+                    <source src="./Video/L1B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+            <img id="N" src="./GIFs/N.webp" alt="This page requares visible GIFs to work." draggable="false">
+                <div id="N2F_N" class="navigation_button" onclick="startBlackoutOnce(); stopJuraAudio(); loopAudio(); countSteps()"></div>
+
+                <div id="N1F_N" class="navigation_button" onclick="startBlackoutTwice(); playJura(); countSteps()"></div> 
+                    <video id="N1F" draggable="false">
+                    <source src="./Video/N1F.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+                <div id="N1B_N" class="navigation_button" onclick="startBlackoutTwice(); playJura(); countSteps()"></div> 
+                    <video id="N1B" draggable="false">
+                    <source src="./Video/N1B.mp4" type="video/mp4" autoplay muted>
+                    Your browser does not support the video tag.
+                    </video>
+
+            <img id="P" src="./GIFs/P.webp" alt="This page requares visible GIFs to work." draggable="false">
+                <div id="P1F_N" class="navigation_button" onclick="startBlackoutOnce(); stopJuraAudio(); loopAudio(); countSteps()"></div> 
+                <div id="P1B_N" class="navigation_button" onclick="startBlackoutOnce(); stopAudio(); loopJuraAudio(); countSteps()"></div> 
+
+
+        </div>
+
+        <audio id="walkAudio" preload="auto"></audio>
+        <audio id="Jura" src="./Audio/Jura.mp3" preload="auto"></audio>
+
+        <audio id="Audio" src="./Audio/StandMain.mp3" preload="auto" loop></audio>
+        <audio id="JuraAudio" src="./Audio/JuraLoop.mp3" preload="auto" loop></audio>
+        <audio id="Upe" src="./Audio/Upe.mp3" preload="auto" loop></audio>
+
+        <script src="navigation.js"></script>
+    </body>
+
+</html>

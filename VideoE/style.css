@@ -1,0 +1,761 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    overflow: hidden;
+}
+
+.video_box {
+    width: 100vw;
+    height: 100vh;
+    background-color: purple;
+    overflow: hidden;
+}
+
+.video_box * {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightgreen;
+    overflow: hidden;
+    position: absolute;
+}
+
+video {
+    width:100vw;
+    height:100vh;
+    object-fit: fill;
+}
+
+img, video {
+    user-drag: none;
+    -webkit-user-drag: none;
+}
+
+.navigation_button {
+    position: absolute;
+    cursor: pointer;
+    z-index: 5;
+    background-color: red;
+}
+
+/* FADE */
+
+#fadeIN {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 0;
+    opacity: 0;
+    position: absolute;
+}
+
+#fadeIN.fade-twice {
+    z-index: 100;
+    animation: fade-twice 10s linear forwards;
+}
+
+#fadeIN.fade-once {
+    z-index: 100;
+    animation: fade-once 1.5s linear forwards;
+}
+
+  @keyframes fade-twice {
+    0%     { opacity: 0; }
+    10%    { opacity: 1; }    /* fade in 1s */
+    15%    { opacity: 1; }    /* hold 0.5s */
+    25%    { opacity: 0; }    /* fade out 1s */
+    75%    { opacity: 0; }    /* wait 5s */
+    82%    { opacity: 1; }    /* fade in 1s */
+    93%    { opacity: 1; }    /* hold 0.5s */
+    100%   { opacity: 0; }    /* fade out 1s */
+}
+
+@keyframes fade-once {
+    0%     { opacity: 0; }
+    27.27% { opacity: 1; }   /* 0.3s of 1.1s = 27.27% */
+    72.72% { opacity: 1; }   /* hold 0.5s = 45.45% more */
+    100%   { opacity: 0; }   /* final 0.3s fade out */
+}
+
+/* A */
+
+#A {
+    visibility: visible;
+}
+
+
+    #A1S_N {
+        visibility: visible;
+    }
+    #A1S_N {
+        top: 70%;
+        left: 30%;  
+        width: 35%;
+        height: 15%;
+    }
+
+    #A2F_N {
+        visibility: visible;        
+    }
+    #A2F_N {
+        top: 33%;
+        left: 27%;  
+        width: 8%;
+        height: 8%;
+    }
+
+    #A2B_N {
+        visibility: hidden;        
+    }
+    #A2B_N {
+        top: 70%;
+        left: 34%;  
+        width: 27%;
+        height: 15%;
+    }
+
+
+    #A1S {
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+    #A2F{
+        visibility: hidden;
+    }
+
+    #A2B{
+        visibility: hidden;
+    }
+
+/* B */
+
+#B{
+    visibility: hidden;
+}
+
+    #B1S_N {
+        visibility: hidden;
+    }
+        #B1S_N {
+        top: 40%;
+        left: 62%;  
+        width: 10%;
+        height: 15%;
+    }
+
+    #B2F_N {
+        visibility: hidden;        
+    }
+        #B2F_N {
+        top: 35%;
+        left: 41%;  
+        width: 10%;
+        height: 10%;
+    }
+
+    #B2B_N {
+        visibility: hidden;        
+    }
+    #B2B_N {
+        top: 75%;
+        left: 28%;  
+        width: 52%;
+        height: 10%;
+    }
+
+    #B3F_N {
+        visibility: hidden;        
+    }
+        #B3F_N {
+        top: 40%;
+        left: 14%;  
+        width: 15%;
+        height: 15%;
+    }
+
+    #B3B_N {
+        visibility: hidden;        
+    }
+        #B3B_N {
+        top: 75%;
+        left: 35%;  
+        width: 50%;
+        height: 10%;
+    }
+
+
+    #B1S {
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+    #B2F{
+        visibility: hidden;
+    }
+
+    #B2B{
+        visibility: hidden;
+    }
+
+    #B3F{
+        visibility: hidden;
+    }
+
+    #B3B{
+        visibility: hidden;
+    }
+
+/* C */
+
+#C {
+    visibility: hidden;
+}
+
+
+    #C1S_N {
+        visibility: hidden;
+    }
+    #C1S_N {
+        top: 30%;
+        left: 35%;  
+        width: 10%;
+        height: 10%;
+    }
+
+    #C2F_N {
+        visibility: hidden;        
+    }
+    #C2F_N {
+        top: 25%;
+        left: 60%;  
+        width: 20%;
+        height: 20%;
+    }
+
+    #C2B_N {
+        visibility: hidden;        
+    }
+    #C2B_N {
+        top: 70%;
+        left: 20%;  
+        width: 27%;
+        height: 15%;
+    }
+
+    #C3F_N {
+        visibility: hidden;        
+    }
+    #C3F_N {
+        top: 40%;
+        left: 15%;  
+        width: 15%;
+        height: 15%;
+    }
+
+    #C3B_N {
+        visibility: hidden;        
+    }
+    #C3B_N {
+        top: 30%;
+        left: 15%;  
+        width: 15%;
+        height: 15%;
+    }
+
+    #C1S {
+        visibility: hidden;
+        cursor: pointer;
+    }
+
+    #C1S_F {
+        visibility: hidden;
+    }
+
+    #C1S_B {
+        visibility: hidden;
+    }
+
+    #C2F{
+        visibility: hidden;
+    }
+
+    #C2B{
+        visibility: hidden;
+    }
+
+    #C3F{
+        visibility: hidden;
+    }
+
+    #C3B{
+        visibility: hidden;
+    }
+
+    /* D */
+
+#D {
+    visibility: hidden;
+}
+
+    /* E */
+
+#E {
+    visibility: hidden;
+}
+
+    #E1F_N {
+        visibility: hidden;
+    }
+    #E1F_N {
+        top: 30%;
+        left: 60%;  
+        width: 10%;
+        height: 15%;
+    }
+
+    #E1F {
+        visibility: hidden;
+    }
+
+    #E1B_N {
+        visibility: hidden;
+    }
+    #E1B_N {
+        top: 73%;
+        left: 34%;  
+        width: 30%;
+        height: 10%;
+    }
+
+    #E1B {
+        visibility: hidden;
+    }
+
+    /* H */
+
+#H {
+    visibility: hidden;
+}
+
+    #H2F_N {
+        visibility: hidden;
+    }
+    #H2F_N {
+        top: 28%;
+        left: 43%;  
+        width: 10%;
+        height: 15%;
+    }
+    #H2F {
+        visibility: hidden;
+    }
+
+    #H2B_N {
+        visibility: hidden;
+    }
+    #H2B_N {
+        top: 75%;
+        left: 15%;  
+        width: 60%;
+        height: 10%;
+    }
+    #H2B {
+        visibility: hidden;
+    }
+
+    #H1S_N {
+        visibility: hidden;
+    }
+    #H1S_N {
+        top: 50%;
+        left: 60%;  
+        width: 20%;
+        height: 20%;
+    }
+    #H1S {
+        cursor: pointer;
+        visibility: hidden;
+    }
+
+    /* I */
+
+#I {
+    visibility: hidden;
+}
+
+    #I1F_N {
+        visibility: hidden;
+    }
+    #I1F_N {
+        top: 28%;
+        left: 33%;  
+        width: 10%;
+        height: 15%;
+    }
+    #I1F {
+        visibility: hidden;
+    }
+
+    #I1B_N {
+        visibility: hidden;
+    }
+    #I1B_N {
+        top: 74%;
+        left: 26%;  
+        width: 20%;
+        height: 10%;
+    }
+    #I1B {
+        visibility: hidden;
+    }
+
+    /* M */
+
+#M {
+    visibility: hidden;
+}
+    #M1F_N {
+        visibility: hidden;
+    }
+    #M1F_N {
+        top: 33%;
+        left: 15%;  
+        width: 20%;
+        height: 18%;
+    }
+    #M1F {
+        visibility: hidden;
+    }
+
+    #M1B_N {
+        visibility: hidden;
+    }
+    #M1B_N {
+        top: 74%;
+        left: 40%;  
+        width: 20%;
+        height: 10%;
+    }
+    #M1B {
+        visibility: hidden;
+    }
+
+    #M2F_N {
+        visibility: hidden;
+    }
+    #M2F_N {
+        top: 43%;
+        left: 53%;  
+        width: 30%;
+        height: 18%;
+        rotate: 15deg;
+    }
+
+    #M2B_N {
+        visibility: hidden;
+    }
+    #M2B_N {
+        top: 35%;
+        left: 40%;  
+        width: 12%;
+        height: 10%;
+    }
+
+
+    /* G */
+
+#G {
+    visibility: hidden;
+}
+    #G1S_N {
+        visibility: hidden;
+    }
+    #G1S_N {
+        top: 30%;
+        left: 60%;  
+        width: 20%;
+        height: 20%;
+    }
+    #G1S {
+        cursor: pointer;
+        visibility: hidden;
+    }
+
+    /* L */
+
+#L {
+    visibility: hidden;
+}
+    #L1F_N {
+        visibility: hidden;
+    }
+    #L1F_N {
+        top: 40%;
+        left: 75%;
+        width: 10%;
+        height: 45%;
+    }
+    #L1F {
+        visibility: hidden;
+    }
+
+    #L1B_N {
+        visibility: hidden;
+    }
+    #L1B_N {
+        top: 74%;
+        left: 40%;  
+        width: 20%;
+        height: 10%;
+    }
+    #L1B {
+        visibility: hidden;
+    }
+
+    /* N */
+
+#N {
+    visibility: hidden;
+}
+    #N2F_N {
+        visibility: hidden;
+    }
+    #N2F_N {
+        top: 30%;
+        left: 27%;
+        width: 10%;
+        height: 10%;
+    }
+
+    #N1F_N {
+        visibility: hidden;
+    }
+    #N1F_N {
+        top: 40%;
+        left: 55%;  
+        width: 15%;
+        height: 18%;
+    }
+    #N1F {
+        visibility: hidden;
+    }
+
+    #N1B_N {
+        visibility: hidden;
+    }
+    #N1B_N {
+        top: 40%;
+        left: 13%;  
+        width: 15%;
+        height: 22%;
+    }
+    #N1B {
+        visibility: hidden;
+    }
+
+    /* P */
+
+#P {
+    visibility: hidden;
+}
+    #P1F_N {
+        visibility: hidden;
+    }
+    #P1F_N {
+        top: 25%;
+        left: 55%;  
+        width: 15%;
+        height: 18%;
+    }
+    #P1F {
+        visibility: hidden;
+    }
+
+    #P1B_N {
+        visibility: hidden;
+    }
+    #P1B_N {
+        top: 30%;
+        left: 15%;  
+        width: 18%;
+        height: 15%;
+    }
+    #P1B {
+        visibility: hidden;
+    }
+
+
+#audio_button {
+    visibility: visible;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(253, 253, 253, 0.199);
+    background-image: url(./mute_icon.jpg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    background-position: center;
+    position: absolute;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#END {
+    visibility: hidden;
+    z-index: 94;
+}
+
+    #END_N1 {
+        visibility: hidden;
+        z-index: 95;
+        top: 43%;
+        left: 43%;  
+        width: 3%;
+        height: 9%;  
+        background-color: red;
+        cursor: pointer;
+    }
+        #END_N2 {
+            visibility: hidden;
+            z-index: 96;
+            top: 20%;
+            left: 62%;  
+            width: 10%;
+            height: 25%;
+            background-color: blue;
+            cursor: pointer;
+        }
+            #END_N3 {
+                visibility: hidden;
+                z-index: 97;
+                top: 70%;
+                left: 2%;  
+                width: 15%;
+                height: 30%;
+                background-color: green;
+                cursor: pointer;
+            }
+                #END_N4 {
+                    visibility: hidden;
+                    z-index: 98;
+                    top: 1%;
+                    left: 80%;  
+                    width: 10%;
+                    height: 25%;
+                    background-color: yellow;
+                    cursor: pointer;
+                }
+
+                #END_N5 {
+                    visibility: hidden;
+                    z-index: 98;
+                    top: 2%;
+                    left: 22%;  
+                    width: 5%;
+                    height: 100%;
+                    background-color: pink;
+                    cursor: pointer;
+                }
+
+                #END_N6 {
+                    visibility: hidden;
+                    z-index: 98;
+                    top: 31%;
+                    left: 16%;  
+                    width: 32%;
+                    height: 4%;
+                    background-color: mediumslateblue;
+                    cursor: pointer;
+                }
+
+                #END_N7 {
+                    visibility: hidden;
+                    z-index: 98;
+                    top: 5%;
+                    left: 87%;  
+                    width: 34%;
+                    height: 81;
+                    background-color: darkolivegreen;
+                    cursor: pointer;
+                }
+
+                    #END_N8 {
+                    visibility: hidden;
+                    z-index: 99;
+                    top: 1%;
+                    left: 80%;  
+                    width: 10%;
+                    height: 25%;
+                    background-color: orange;
+                    cursor: pointer;
+                }
+
+                #END_N9 {
+                    visibility: hidden;
+                    z-index: 99;
+                    top: 45%;
+                    left: 25%;
+                    width: 62%;
+                    height: 1%;
+                    background-color: white;
+                    cursor: pointer;
+                }
+
+                #END_N10 {
+                    visibility: hidden;
+                    z-index: 99;
+                    top: 52%;
+                    left: 54%;  
+                    width: 24%;
+                    height: 54%;
+                    background-color: deepskyblue;
+                    cursor: pointer;
+                }
+
+                #END_N11 {
+                    visibility: hidden;
+                    z-index: 99;
+                    top: 25%;
+                    left: 3%;  
+                    width: 36%;
+                    height: 65%;
+                    background-color: black;
+                    cursor: pointer;
+                }
+    #END_END {
+        visibility: hidden;
+        z-index: 100;
+        top: 4%;
+        left: 39%;  
+        width: 20%;
+        height: 76%;
+        background-color: red;
+        cursor: pointer;
+        background-size: cover;
+    }
+
+
+/* #END_F {
+    visibility: hidden;
+    z-index: 100;
+}
+
+    #END_F1 {
+        visibility: hidden;
+        z-index: 100;
+    }
+
+        #END_F2 {
+            visibility: hidden;
+            z-index: 100;
+        } */
