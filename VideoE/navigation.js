@@ -1005,7 +1005,7 @@ function delay(ms) {
 
     function countSteps() {
       x += 1;
-      if (x === 100) {
+      if (x === 10) {
         startEnding();
       }
     }
