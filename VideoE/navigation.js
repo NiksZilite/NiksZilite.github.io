@@ -1,4 +1,5 @@
 const audio_button = document.getElementById('audio_button');
+const anotacija = document.getElementById('anotacija');
 let x = 0;
 const navigation_button = document.querySelectorAll('.navigation_button');
 const END = document.getElementById('END');
@@ -963,6 +964,7 @@ function delay(ms) {
 
     function loopAudio(){
       audio_button.style.visibility = "hidden";
+      anotacija.style.visibility = "hidden";
       const audio = document.getElementById("Audio");
       audio.play();
     }
